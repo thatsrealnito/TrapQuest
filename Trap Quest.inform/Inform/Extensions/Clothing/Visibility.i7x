@@ -175,7 +175,7 @@ To decide which object is the at least partial concealer of (C - a wearthing):
 		if the top-layer of C > 0:
 			let T be nothing;
 			repeat with O running through partially-top-layer-concealing clothing:
-				if the top-layer of O > the top-layer of C and O is not fully exposing and O is not see-through:
+				if the top-layer of O > the top-layer of C and O is not see-through:
 					now T is O;
 			if appearance-explained is 1 and debugmode > 1, say "So far we've found [if T is nothing]that there's no[otherwise]that [printed name of T] is the[end if] at least partial top layer cover.";
 			decide on T; [We point at the top coverer over others, because it's the most visible.]
@@ -184,7 +184,7 @@ To decide which object is the at least partial concealer of (C - a wearthing):
 		decide on M; [We point at the middle coverer (if there is no coverer at all because it's an item without a layer, this will resolve to 'nothing').]
 	decide on the concealer of C. [For non-clothing items there's no difference.]
 
-[This is is at what bulk levels the clothing can prevent people from even knowing there's a diaper there]
+[This is at what bulk levels the clothing can prevent people from even knowing there's a diaper there]
 To decide which number is the diaperHidingLength of (C - a clothing):
 	if C is crotch-displaced or C is crotch-unzipped or C is crotch-ripped, decide on -1;
 	if C is skirted and C is not hobble-skirted, decide on the skirtLength of C; [Hobble skirts are too tight to conceal thick diapers]

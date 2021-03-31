@@ -166,6 +166,7 @@ To decide which object is the at least partial concealer of (C - clitoris lead):
 	decide on nothing.
 
 Definition: clitoris lead (called C) is subduing:[Can C be held by monsters to fully control the player?]
+	if the at least partial concealer of C is a thing, decide no;
 	decide yes.
 
 Definition: yourself is clit stuck:
@@ -286,8 +287,17 @@ A nipple piercing is a kind of piercing.
 A nipple chain is a kind of nipple piercing. The printed name of nipple chain is "[clothing-title-before]nipple chain[clothing-title-after]". The printed plural name of nipple chain is "[TQlink of item described][item style]nipple chains[clothing-title-after]". The text-shortcut of nipple chain is "nc". There is 1 nipple chain. Figure of nipple chain is the file "Items/Accessories/Piercings/nipplechain1.png". A nipple chain is usually titfuck-addiction-influencing. A nipple chain has a number called arousal-charge.
 
 To decide which object is the coverer of (C - a nipple chain):
-	repeat with O running through top-layer-concealing clothing:
+	repeat with O running through top-layer-concealing very low cut or higher clothing:
 		if O is not mesh, decide on O;
+	decide on nothing.
+
+To decide which object is the concealer of (C - a nipple chain):
+	repeat with O running through actually dense top-layer-concealing very low cut or higher clothing:
+		decide on O;
+	decide on nothing.
+To decide which object is the at least partial concealer of (C - a nipple chain):
+	repeat with O running through partially-top-layer-concealing very low cut or higher clothing:
+		if O is not see-through, decide on O;
 	decide on nothing.
 
 [!<TheCowChainSlutRule>+
@@ -674,8 +684,8 @@ To compute periodic effect of (P - head-module):
 			IntDown 1;
 			increase the int-transfer of P by 1;
 			if the lips of face >= max lip size or HL / 3 > (3 - the lips of face):
-				FakeHairUp 1;
 				say "[bold type]Your hair [if the fake largeness of hair > 0]extensions suddenly feel terribly warm and they suddenly stretch in size[otherwise]suddenly feels terribly warm as extensions begin to manifest themselves at the tips[end if]! ";
+				FakeHairUp 1;
 			otherwise:
 				LipsUp 1;
 				say "[bold type]Your lips suddenly feel terribly warm as they puff out inside, even more collagen having been created inside by the module! ";

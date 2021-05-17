@@ -97,7 +97,7 @@ To set up magic state of (C - a sex toy):
 		now C is bland;
 		set up BUC of C.
 
-To set up toy enchantments of (C - a sex toy):
+To set up magic attribute of (C - a sex toy):
 	let R be a random number between 1 and 10;
 	if R is 1, now C is refreshment;
 	if R is 2, now C is rejuvenation;
@@ -113,12 +113,8 @@ To set up toy enchantments of (C - a sex toy):
 
 To uniquely set up (C - a sex toy):
 	ToyShortcutAssign C;
-	set up toy enchantments of C;
-	if the size of C is 0:
-		now the size of C is a random number between 1 and 10;
-	if C is plug:
-		if the size of C is 0, now the size of C is a random number between 1 and 10;
-		if C is blandness and the size of C < 4 and a random number between 1 and 4 is 1, now C is expansion.
+	if the size of C is 0, now the size of C is a random number between 1 and 10;
+	if C is plug and C is not unique and C is blandness and the size of C < 4 and a random number between 1 and 4 is 1, now C is expansion.
 
 To compute periodic effect of (C - an expansion clothing):
 	increase the toy-charge of C by 1;
@@ -232,7 +228,7 @@ To compute gripping of (I - a thing):
 				otherwise say "[if the bimbo of the player < 7][line break][first custom style]Holy shit, that felt pretty intense![otherwise if the bimbo of the player < 14][line break][variable custom style]I can't believe how good that made my [asshole] feel![otherwise][line break][second custom style]MM, I love that feeling![end if][roman type][line break]";
 			otherwise:
 				anally orgasm shamefully;
-			now I is not penetrating asshole;
+			dislodge I;
 			now I is in the location of the player;
 			if newbie tips is 1, say "[one of][newbie style]Toys won't fall out while you are on your knees.[roman type][line break][or][stopping]";
 			repeat with M running through reactive people:
@@ -260,7 +256,7 @@ To compute gripping of (I - a thing):
 				say "[if the bimbo of the player < 7][line break][first custom style]Holy shit, that felt pretty intense![otherwise if the bimbo of the player < 14][line break][variable custom style]I can't believe how good that made my [vagina] feel![otherwise][line break][second custom style]MM, I love that feeling![end if][roman type][line break]";
 			otherwise:
 				vaginally orgasm shamefully;
-			now I is not penetrating vagina;
+			dislodge I;
 			now I is in the location of the player;
 			repeat with M running through reactive people:
 				compute toy expulsion reaction of M;

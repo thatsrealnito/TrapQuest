@@ -165,7 +165,7 @@ This is the robochef winding rule:
 		now M is not chef-wound;
 		rule succeeds;
 	otherwise:
-		if the player is the donator and the difficulty of M > the starting difficulty of M and a random number between 1 and 5 is 1 and the player is upright:
+		if the difficulty of M > the starting difficulty of M and a random number between 1 and 5 is 1 and the player is upright:
 			say "One of [NameDesc of M]'s arms straightens out and slowly begins to spin around its circular joint. It must be charging up a powerful attack!";
 			now M is chef-wound;
 			rule succeeds.
@@ -252,16 +252,6 @@ To say DQFeedingResistReactionFlav of (M - a robochef):
 Part 5 - Conversation
 
 Section 1 - Greeting
-
-[To compute basic greeting to (M - robochef):
-	if M is interested:
-		say VanityGreeting to M;
-	otherwise:
-		if the times-met of M < 2, say FirstGreeting to M;
-		otherwise say RepeatGreeting to M;
-		unless the class of the player is maid:
-			now the boredom of M is 0;
-			compute correct perception of M.]
 
 To say FirstResponse of (M - robochef):
 	if the class of the player is maid:

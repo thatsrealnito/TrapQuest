@@ -37,6 +37,7 @@ title	subtable	description	toggle
 "Weight gain - 3 points ([if choice in row 12 of the Table of Player Options is -1]never[otherwise if choice in row 12 of the Table of Player Options is 0]not now[otherwise if choice in row 12 of the Table of Player Options is 1][bold type]yes this time[roman type][otherwise][bold type]always[roman type][end if])"	--	--	weight gain fetish toggle rule
 "Watersports (urine drinking) - 3 points ([if choice in row 7 of the Table of Player Options is -1]never[otherwise if choice in row 7 of the Table of Player Options is 0]not now[otherwise if choice in row 7 of the Table of Player Options is 1][bold type]yes this time[roman type][otherwise][bold type]always[roman type][end if])"	--	--	watersports fetish toggle rule
 "Alcohol - 2 points ([if the player is not a top donator]bab testers only for now![otherwise if choice in row 69 of the Table of Player Options is -1]never[otherwise if choice in row 69 of the Table of Player Options is 0]not now[otherwise if choice in row 69 of the Table of Player Options is 1][bold type]yes this time[roman type][otherwise][bold type]always[roman type][end if])"	--	--	alcohol fetish toggle rule
+"NPC gender preference (changes the description of some NPCs - but most alternate images don't exist yet!): ([if lady fetish is 0]No preference[otherwise if lady fetish is 1]Feminine NPCs only[otherwise]Masculine NPCs only[end if] [if the remainder after dividing choice in row 70 of the Table of Player Options by 2 is 0]never randomise[otherwise]for now, but can be randomised[end if] - [if the player is a top donator]free[otherwise]bab testers only for now[end if])"	--	--	lady fetish toggle rule
 "Male-to-female sex change - 2 points ([if choice in row 1 of the Table of Player Options is 1]Disabled since the player is female[otherwise if choice in row 10 of the Table of Player Options is -1]never[otherwise if choice in row 10 of the Table of Player Options is 0]not now[otherwise if choice in row 10 of the Table of Player Options is 1][bold type]yes this time[roman type][otherwise][bold type]always[roman type][end if])"	--	--	TG fetish toggle rule
 "ENABLE SEASONAL CONTENT"	Table of Festive Options	--	--
 [DO NOT PUT ANY OPTIONS BELOW THE SEASONAL CONTENT ROW - they will not appear for non-alpha testers. Put them above the seasonal row instead.]
@@ -268,7 +269,7 @@ This is the alcohol random rule:
 The alcohol random rule is listed in the random mode rules.
 
 To decide which number is lady fetish:
-	if the player is not a top donator or diaper quest is 1, decide on 0;
+	if the player is not a top donator, decide on 0;
 	if choice in row 70 of the Table of Player Options <= 0, decide on 0;
 	otherwise decide on choice in row 70 of the Table of Player Options / 2.
 To decide which number is full-lady fetish:[lady fetish should come with a disclaimer that futa may be unavoidable. full-lady indicates that futa is off and lady fetish is on]

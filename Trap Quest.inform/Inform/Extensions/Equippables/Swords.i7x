@@ -54,12 +54,13 @@ To say ShortDesc of (S - which-sword):
 	say "sword".
 
 To say ExamineDesc of (S - which-sword):
-	say "A sword stuck in a stone, just like in the fairy tales you've heard. If you [bold type]take[roman type] it out, perhaps your destiny will become clear.".
+	say "A sword stuck in a stone, just like in the fairy tales you've heard. If you [bold type]take[roman type] it out, perhaps your destiny will become clear."
 
 Definition: which-sword is immune to change: decide yes.
 
 Check taking which-sword:
-	if there is a worn hand ready clothing, say "You try, but the hilt resists your touch. Maybe you need an open hand?" instead.
+	if there is a worn hand ready clothing, say "You try, but the hilt resists your touch. Maybe you need an open hand?" instead;
+	if the player is wrist bound behind, say "You can't pull out the sword while your hands are stuck behind your back." instead.
 
 Definition: an equippable is destiny-appropriate: decide no.
 Definition: an equippable is destiny-prioritised: decide no.
@@ -87,7 +88,15 @@ sword-of-purity is a sword. sword-of-purity is purity.
 The printed name of sword-of-purity is "[clothing-title-before]sword of purity[clothing-title-after]". Understand "of purity", "purity" as sword-of-purity.
 
 To say ClothingDesc of (S - sword-of-purity):
-	say "A gleaming silver sword, instilled with the power of purity. Holy energy emanates from the blade, as if the sword itself were comprised of pure, holy power. [bold type]The power seems to become stronger the more your body is exposed. [roman type][if S is worn]Just holding it in your hand makes you feel incredibly powerful, but no matter the angle, the light reflecting off the blade seems to cast a spotlight on your [vagina], as if to remind enemies where the power comes from... and how to defeat it.[otherwise]It's clearly quite powerful, but something tells you that if you ever lose while wielding this sword...[end if]".
+	say "A gleaming silver sword, instilled with the power of purity. Holy energy emanates from the blade, as if the sword itself were comprised of pure, holy power. [bold type]The power seems to become stronger the more your body is exposed. [roman type][if S is worn]Just holding it in your hand makes you feel incredibly powerful, but no matter the angle, the light reflecting off the blade seems to cast a spotlight on your [vagina], as if to remind enemies where the power comes from... and how to defeat it.[otherwise]It's clearly quite powerful, but something tells you that if you ever lose while wielding this sword...[end if]";
+	if S is worn:
+		say "Your current body part exposure status is:[line break]";
+		repeat with BP running through body parts:
+			if BP is at least partially exposed:
+				say "[BP]: [bold type]exposed[roman type][line break]";
+			otherwise:
+				say "[BP]: [if BP is breasts and there is a worn warrior chestpiece][bold type]sexified by chestpiece[otherwise]not exposed[end if][roman type][line break]".
+
 To say ShortDesc of (S - sword-of-purity):
 	say "gleaming silver sword".
 
@@ -482,6 +491,7 @@ To compute periodic effect of (H - demon broadsword):
 					decrease the arousal of H by 2;
 				FatigueUp 30 - S;[the lower S is, the more fatigued you get]
 				now demon lord is penetrating face;
+				instantThroat demon lord;
 				BlowCount;
 				now demon lord is not penetrating face;
 				dislodge H;

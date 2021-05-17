@@ -370,12 +370,12 @@ Definition: chess-lesson is lesson-appropriate:
 
 Figure of chess table is the file "Env/School/chesstable1.jpg".
 
-Figure of chess cutscene 1 is the file "Special/Cutscene/cutscene-chess1a.png".
-Figure of chess cutscene 2 is the file "Special/Cutscene/cutscene-chess2a.png".
-Figure of chess cutscene 2c is the file "Special/Cutscene/cutscene-chess2c.png".
-Figure of chess cutscene 2d is the file "Special/Cutscene/cutscene-chess2d.png".
-Figure of chess cutscene 3 is the file "Special/Cutscene/cutscene-chess3a.png".
-Figure of chess cutscene 4 is the file "Special/Cutscene/cutscene-chess4a.png".
+Figure of chess cutscene 1 is the file "Special/Cutscene/cutscene-chess1.jpg".
+Figure of chess cutscene 2 is the file "Special/Cutscene/cutscene-chess2.jpg".
+Figure of chess cutscene 2c is the file "Special/Cutscene/cutscene-chess2c.jpg".
+Figure of chess cutscene 2d is the file "Special/Cutscene/cutscene-chess2d.jpg".
+Figure of chess cutscene 3 is the file "Special/Cutscene/cutscene-chess3.jpg".
+Figure of chess cutscene 4 is the file "Special/Cutscene/cutscene-chess4.jpg".
 
 To render chess state:
 	if diaper messing < 3:
@@ -1016,9 +1016,9 @@ To compute chess loss taunting of (M - a staff member):
 To compute chess loss taunting of (M - a nasty student):
 	if the number of worn chest tattoos is 0:
 		say "[speech style of M]'Well well well, what do we have here?'[roman type][line break][big he of M] is holding a magic marker in [his of M] hand. [big he of M] walks up to you and straddles your lap, and smirks maliciously as [he of M] scribbles [']DISGUSTING FAT UGLY PIG['] permanently onto on your chest.[line break][speech style of M]'I don't think I could have gotten away with writing something this harsh with the teachers watching, but when it's just you and me, who's going to prove that I wrote this? Hahaha.'[roman type][line break]";
-		summon marker chest tattoo;
 		now the tattoo-title of marker chest tattoo is "DISGUSTING FAT UGLY PIG";
 		now the tattoo-outrage of marker chest tattoo is 14;
+		summon marker chest tattoo;
 	otherwise:
 		say "[speech style of M]'[one of]Ooh, looks what I've found, all alone and with nobody to protect [him of the player].'[or]What did I hear you just say? Pinch my nipples? That's a weird request, but okay.'[cycling][roman type][line break][big he of M] ignores your whining pleas for mercy as [he of M] grabs your nipples with pincer grips and twists them painfully.";
 		PainUp 1.
